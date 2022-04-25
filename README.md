@@ -7,14 +7,27 @@
 - Carbone, Paula
 - Perez, Leonor
 
-## Configuracion inicial
-
+## Configuración inicial
 ```
 pip install -r requirements.txt
 ```
 
-## Iniciar aplicación
-
+## Iniciar aplicación localmente
 ```
 python main.py
 ```
+
+## Heroku
+
+### Configuración inicial
+1. Instalar [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli)
+2. Ejecutar `heroku login`
+3. Ejecutar `heroku git:remote -a mascot-app-dev`
+
+### Subir nueva versión
+```
+git push heroku main
+```
+
+### Abrir aplicación
+https://mascot-app-dev.herokuapp.com/
