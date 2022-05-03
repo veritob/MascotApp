@@ -1,3 +1,5 @@
+import MySQLdb
+from flask import Flask, render_template, request, redirect, url_for, session
 from flask import Flask, render_template
 from flask_mysqldb import MySQL
 
@@ -18,6 +20,12 @@ mysql = MySQL(app)
 @app.route('/', methods = ['GET', 'POST'])
 def login():
     return render_template('index.html')
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    
+   return render_template('register.html')   
 
 if __name__ == "__main__":
     app.run(port=3306, debug=True)
